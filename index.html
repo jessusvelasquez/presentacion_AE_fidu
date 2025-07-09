@@ -341,6 +341,55 @@
         padding: 10px 20px;
     }
 }
+
+/* Ajustes fuertes para tablets en landscape (como Xiaomi Pad 6) */
+@media screen and (min-width: 768px) and (max-width: 1280px) and (orientation: landscape) {
+    .reveal {
+        font-size: 16px;
+        zoom: 0.85;
+    }
+
+    .reveal h1 {
+        font-size: 1.3em;
+    }
+
+    .reveal h2 {
+        font-size: 1.1em;
+    }
+
+    .reveal .slides section {
+        padding: 5px 10px;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .gear-box, .proposal-box, .custom-card {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .pillar h3 {
+        font-size: 1em;
+    }
+
+    .pillar p, .card-text, .bridge {
+        font-size: 0.9em;
+    }
+
+    .logo-header img, .title-slide .logo-container img {
+        max-height: 60px;
+    }
+
+    .title-slide .presenter-info {
+        font-size: 0.9em;
+    }
+}
 </style>
 </head>
 <body>
