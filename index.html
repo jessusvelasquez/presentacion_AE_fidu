@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+
 
   <title>Innovando sobre Cimientos Sólidos - Fiduoccidente</title>
 
@@ -265,132 +266,56 @@
       .aux {
           margin-top: 20px;
       }
-  
-@media (max-width: 768px) {
-    .reveal {
-        font-size: 20px;
-    }
 
-    .reveal h1 {
-        font-size: 1.6em;
-    }
+      @media screen and (max-height: 900px) {
+          .reveal {
+              font-size: 16px;
+              zoom: 0.85;
+          }
 
-    .reveal h2 {
-        font-size: 1.3em;
-    }
+          .reveal h1 {
+              font-size: 1.3em;
+          }
 
-    .reveal .pillars-grid {
-        grid-template-columns: 1fr;
-    }
+          .reveal h2 {
+              font-size: 1.1em;
+          }
 
-    .gear-box {
-        width: 100%;
-        padding: 10px;
-    }
+          .reveal .slides section {
+              padding: 5px 10px;
+              max-height: 100vh;
+              overflow-y: auto;
+          }
 
-    .proposal-box {
-        width: 100%;
-        font-size: 0.9em;
-    }
+          .gear-box, .proposal-box, .custom-card {
+              width: 100%;
+              padding: 10px;
+              font-size: 0.9em;
+          }
 
-    .custom-card {
-        width: 100%;
-        font-size: 0.9em;
-        padding: 20px;
-    }
+          .pillars-grid {
+              grid-template-columns: 1fr;
+              gap: 15px;
+          }
 
-    .bridge {
-        font-size: 0.6em;
-        white-space: normal;
-    }
+          .pillar h3 {
+              font-size: 1em;
+          }
 
-    .logo-header img {
-        max-height: 40px;
-    }
+          .pillar p, .card-text, .bridge {
+              font-size: 0.9em;
+          }
 
-    .title-slide .logo-container img {
-        max-height: 80px;
-    }
-}
+          .logo-header img, .title-slide .logo-container img {
+              max-height: 60px;
+          }
 
-/* Permitir scroll vertical en cada slide */
-.reveal .slides section {
-    max-height: 100vh;
-    overflow-y: auto;
-}
+          .title-slide .presenter-info {
+              font-size: 0.9em;
+          }
+      }
 
-/* Ajustes adicionales para tablets en modo horizontal */
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .reveal {
-        font-size: 18px;
-    }
-
-    .reveal h1 {
-        font-size: 1.4em;
-    }
-
-    .reveal h2 {
-        font-size: 1.2em;
-    }
-
-    .gear-box, .proposal-box, .custom-card {
-        width: 90%;
-    }
-
-    .reveal .slides section {
-        padding: 10px 20px;
-    }
-}
-
-/* Ajustes fuertes para tablets en landscape (como Xiaomi Pad 6) */
-@media screen and (min-width: 768px) and (max-width: 1280px) and (orientation: landscape) {
-    .reveal {
-        font-size: 16px;
-        zoom: 0.85;
-    }
-
-    .reveal h1 {
-        font-size: 1.3em;
-    }
-
-    .reveal h2 {
-        font-size: 1.1em;
-    }
-
-    .reveal .slides section {
-        padding: 5px 10px;
-        max-height: 100vh;
-        overflow-y: auto;
-    }
-
-    .gear-box, .proposal-box, .custom-card {
-        width: 100%;
-        padding: 10px;
-        font-size: 0.9em;
-    }
-
-    .pillars-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .pillar h3 {
-        font-size: 1em;
-    }
-
-    .pillar p, .card-text, .bridge {
-        font-size: 0.9em;
-    }
-
-    .logo-header img, .title-slide .logo-container img {
-        max-height: 60px;
-    }
-
-    .title-slide .presenter-info {
-        font-size: 0.9em;
-    }
-}
-</style>
+  </style>
 </head>
 <body>
 
