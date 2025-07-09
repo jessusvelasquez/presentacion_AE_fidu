@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Innovando sobre Cimientos Sólidos - Fiduoccidente</title>
+
+  <!-- Base Reveal.js styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+          crossorigin="anonymous"></script>
+
+  <!-- Fiduoccidente Custom Theme -->
+  <style>
+      :root {
+          --fidu-dark-blue: #003A70;
+          --fidu-light-blue: #007BBE;
+          --fidu-text-grey: #333333;
+          --fidu-light-grey-bg: #f5f7f9; /* Color base para el fondo */
+      }
+
+      .reveal {
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          color: var(--fidu-text-grey);
+          font-size: 32px; /* Tamaño de fuente base ajustado */
+          background-color: var(--fidu-light-grey-bg); /* Fondo unificado */
+      }
+
+      .reveal p, .reveal li {
+          line-height: 1.6; /* Aumentar interlineado para mejor legibilidad */
+      }
+
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+          color: var(--fidu-dark-blue);
+          font-weight: 700;
+          text-transform: none;
+      }
+
+      .reveal h1 {
+          font-size: 2.2em;
+      }
+
+      .reveal h2 {
+          font-size: 1.7em;
+      }
+
+      .reveal h3 {
+          font-size: 1.2em;
+      }
+
+      .reveal strong {
+          color: var(--fidu-light-blue);
+      }
+
+      .reveal a {
+          color: var(--fidu-light-blue);
+      }
+
+      .reveal .progress {
+          background: rgba(0, 0, 0, .2);
+          color: var(--fidu-light-blue);
+          height: 4px;
+      }
+
+      .reveal .slides section {
+          box-sizing: border-box;
+          padding: 20px 40px;
+      }
+
+      .logo-header {
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          z-index: 10;
+      }
+
+      .logo-header img {
+          max-height: 50px;
+          margin: 0;
+      }
+
+      .title-slide .logo-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 40px;
+          margin-bottom: 30px;
+      }
+
+      .title-slide .logo-container img {
+          max-height: 100px;
+          margin: 0;
+      }
+
+      .title-slide h1 {
+          font-size: 2.2em;
+      }
+
+      .title-slide .presenter-info {
+          margin-top: 40px;
+          line-height: 1.4;
+      }
+
+      .title-slide .presenter-info .name {
+          font-size: 0.8em;
+          margin: 0;
+          font-weight: bold;
+      }
+
+      .title-slide .presenter-info .role {
+          font-size: 0.7em;
+          margin: 0;
+          margin-top: 8px;
+      }
+
+      .title-slide .presenter-info .specialty {
+          font-size: 0.6em;
+          font-style: italic;
+          margin-top: 8px;
+      }
+
+
+      .pillars-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 25px;
+          text-align: left;
+          font-size: 0.9rem;
+          width: 100%;
+          margin: 5px auto 0;
+      }
+
+      .pillar {
+          background-color: #ffffff; /* Fondo blanco para contraste */
+          padding: 25px;
+          border-radius: 10px;
+          border-left: 5px solid var(--fidu-light-blue);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .pillar:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .pillar h3 {
+          margin-top: 0;
+          font-size: 1.2em;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          justify-content: center;
+      }
+
+      .pillar p {
+          line-height: 1.4;
+      }
+
+      .gear-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          margin-top: 20px;
+      }
+
+      .gear-box {
+          background-color: white; /* Fondo blanco para contraste */
+          padding: 20px 30px;
+          border-radius: 15px;
+          text-align: center;
+          width: 300px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .gear-box span {
+          font-size: 4em;
+          display: inline-block;
+      }
+
+      .gear-box p {
+          margin: 10px 0 0 0;
+          font-weight: bold;
+          font-size: 0.5em;
+      }
+
+      .bridge {
+          font-size: 0.4em;
+          font-weight: bold;
+          color: var(--fidu-dark-blue);
+          background-color: #e6f2f9;
+          padding: 15px 25px;
+          border-radius: 10px;
+          border: 2px solid var(--fidu-light-blue);
+          white-space: nowrap;
+          text-align: center;
+      }
+
+      .proposal-box {
+          background-color: #e6f2f9;
+          border: 2px dashed var(--fidu-light-blue);
+          padding: 25px;
+          border-radius: 15px;
+          text-align: left;
+          font-size: 0.8em;
+          margin-top: 30px;
+          width: 80%;
+      }
+
+      .proposal-box h3 {
+          margin-top: 0;
+      }
+
+      .final-slide{
+          background-color: var(--fidu-dark-blue);
+          color: white;
+      }
+
+      .final-slide h1, .final-slide h2, .final-slide h3, .final-slide strong {
+          color: white;
+      }
+
+      /* Invertir el logo del header solo en la diapositiva final */
+      .final-slide .logo-header img {
+          filter: brightness(0) invert(1);
+      }
+
+      /* Card Style for Text */
+      .custom-card {
+          background-color: #ffffff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+          text-align: left;
+          margin: 20px auto;
+          width: 90%;
+      }
+
+      .card ul {
+          margin: 0 auto;
+          display: inline-block;
+          padding-left: 20px;
+      }
+
+      .card p {
+          text-align: center;
+      }
+
+      /* Estilo especial para resaltar el texto clave */
+      .highlight-card {
+          border-left: 5px solid var(--fidu-light-blue);
+      }
+
+      .card-text {
+          font-size: 20px;
+      }
+
+      .aux {
+          margin-top: 20px;
+      }
+  </style>
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Slide 1: Título -->
+    <section class="title-slide">
+      <div class="logo-container">
+        <img src="https://raw.githubusercontent.com/jessusvelasquez/images/main/logo_td.jpeg"
+             alt="Logo Transformación Digital" style="height: 100px;">
+      </div>
+      <h1>Innovando sobre Cimientos Sólidos</h1>
+      <h2 style="color: var(--fidu-light-blue);">Arquitectura Empresarial para el Futuro de la Fidu</h2>
+      <div class="presenter-info">
+        <h3 class="name">Jesus Alberto Velasquez Berrio</h3>
+        <p class="role">Líder técnico equipo Persona jurídica</p>
+        <p class="subtitle">Especialista en Arquitectura Empresarial y Software</p>
+      </div>
+    </section>
+
+    <!-- Common Header for all other slides -->
+    <div class="logo-header">
+      <img src="https://raw.githubusercontent.com/jessusvelasquez/images/main/logo_fidu.jpeg" alt="Logo Fiduoccidente">
+    </div>
+
+    <!-- Slide 2: Punto de Partida -->
+    <section>
+      <h2>Nuestro Punto de Partida</h2>
+      <h3><strong>🏆 Somos Pioneros 🥇</strong></h3>
+      <div class="custom-card highlight-card"> <!-- Tarjeta con resaltado especial -->
+        <p class="fragment" data-fragment-index="1">
+          Fiduoccidente no solo habla de transformación
+        </p>
+        <p class="fragment" data-fragment-index="2" style="text-align: center"><strong>La está liderando con
+          propósito.</strong>
+        </p>
+        <div class=" fragment custom-card" data-fragment-index="3">
+          <div class="card-body text-center">
+            Proyectos como la <strong>herramienta de vinculación digital</strong> demuestran que estamos innovando y
+            poniendo al cliente en el centro. Estamos construyendo activamente nuestro futuro.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Slide 3: Preguntas Estratégicas -->
+    <section>
+      <h2>Preguntas Estratégicas del Éxito</h2>
+      <div class="container-sm">
+        <p>Y este éxito trae nuevas preguntas</p>
+        <div class="fragment alert alert-primary" role="alert">
+          A medida que innovamos, 🧱 ¿cómo nos aseguramos de que no creamos <strong>silos para el futuro</strong>?
+        </div>
+        <div class="fragment alert alert-primary" role="alert">
+          💸 ¿Nuestra velocidad de hoy está creando la <strong>deuda técnica</strong> de mañana?
+        </div>
+        <div class="fragment alert alert-primary" role="alert">
+          Y la más importante: 🤝 ¿cómo garantizamos una experiencia unificada y de total <strong>confianza</strong> para
+          un cliente que interactúa con múltiples productos nuestros?
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Dos Velocidades -->
+    <section>
+      <h2>Sincronizando <br/>Nuestras Dos Velocidades</h2>
+      <p>Vivimos un 'reto de dos velocidades', común en toda industria líder. <strong>Es un desafío de diseño, no de
+        equipos.</strong></p>
+      <div class="gear-container">
+        <div class="gear-box fragment zoom-in" data-fragment-index="1">
+          <span>🚀</span>
+          <p>Agilidad e Innovación</p>
+        </div>
+        <div class="bridge fragment fade-in-then-out" data-fragment-index="3">
+          Arquitectura<br>Empresarial
+        </div>
+        <div class="gear-box fragment zoom-in" data-fragment-index="2">
+          <span>🏛️</span>
+          <p>Estabilidad y Confianza (Core)</p>
+        </div>
+      </div>
+      <p class="fragment" data-fragment-index="3" style="font-size: 0.8em; margin-top: 30px;">
+        La Arquitectura Empresarial es el <strong>puente de diseño y el traductor</strong> que une estos dos mundos,
+        permitiéndonos ser ágiles y seguros a la vez.
+      </p>
+    </section>
+
+    <!-- Slide 5.1: Pilares (Parte 1) -->
+    <section>
+      <h2>La Gran Noticia<br/> <strong>¡Ya Hacemos Arquitectura!</strong></h2>
+      <p style="font-size: 0.5em;">La AE se apoya en 4 pilares que, sin saberlo, ya aplicamos en nuestras victorias
+        diarias.</p>
+      <div class="pillars-grid">
+        <div class="pillar fragment">
+          <h3><span>📊</span>1. Arquitectura de Negocio</h3>
+          <p>Es el plano de nuestra estrategia; define <strong>qué hacemos y por qué</strong>. </p>
+          <div class="alert alert-success" role="alert">
+            Lo vimos en acción cuando
+            se diseñó el <strong>viaje del cliente para la vinculación digital</strong>, diferenciando la ruta asistida
+            de la autogestionada.
+          </div>
+        </div>
+        <div class="pillar fragment">
+          <h3><span>💾</span>2. Arquitectura de Datos</h3>
+          <p>Trata nuestra información como un activo para garantizar la <strong>calidad y confianza</strong>.</p>
+          <div class="alert alert-success" role="alert">
+            Lo aplicamos cuando se estandarizó la definición de <strong>'rentabilidad neta'</strong> para que todos los
+            fondos la reporten igual.
+          </div>
+        </div>
+        <div class="pillar fragment">
+          <h3><span>🧩</span>3. Arquitectura de Aplicaciones</h3>
+          <p>Es el mapa de nuestro software, buscando que los sistemas <strong>colaboren y sean reutilizables</strong>.</p>
+          <div class="alert alert-success" role="alert">
+            Lo hacemos al usar <strong>APIs compartidas</strong> (validación en listas, envío de correos) o <strong>Micro-Frontends</strong>
+            (módulo de OTP).
+          </div>
+        </div>
+        <div class="pillar fragment">
+          <h3><span>☁️</span>4. Arquitectura Tecnológica</h3>
+          <p>Son los cimientos de TI que nos dan <strong>potencia y seguridad</strong>.</p>
+          <div class="alert alert-success" role="alert">
+            Lo hacemos al decidir que los
+            nuevos desarrollos se montarán sobre nuestra <strong>plataforma en la nube estandarizada</strong>,
+            asegurando escalabilidad.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 6: Beneficios -->
+    <section>
+      <h2>Beneficios Directos para Fidu</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4 aux">
+        <div class="col fragment">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><strong>⚡️ Mayor Agilidad </strong></h5>
+              <p class="card-text alert alert-light" role="alert">Lanzar nuevos fondos o productos fiduciarios en <strong>semanas, no meses</strong>,
+                reutilizando capacidades existentes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col fragment">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><strong>🛡️ Confianza Reforzada </strong></h5>
+              <p class="card-text alert alert-light" role="alert">Integrar la seguridad y el cumplimiento normativo en el <strong>ADN de nuestros
+                proyectos</strong>,
+                no como un parche final.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col fragment">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><strong>⚙️ Mayor Eficiencia</strong></h5>
+              <p class="card-text alert alert-light" role="alert">Dejar de gastar en sistemas redundantes y <strong>liberar recursos</strong> para la
+                próxima gran
+                innovación.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col fragment">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><strong>🎯 Decisiones Estratégicas</strong></h5>
+              <p class="card-text alert alert-light" role="alert">Tener una visión clara de cómo la tecnología apoya al negocio para <strong>invertir de forma inteligente</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 7: Propuesta -->
+    <section>
+      <h2>Un Primer Paso<br/> <strong>🤔  ¿Qué tal si...?</strong></h2>
+
+      <div class="idea-box fragment">
+        <h3>Imaginemos un Mapa de Capacidades</h3>
+        <p>
+          Qué pasaría si un equipo pequeño y ágil (negocio y tecnología) se reuniera para responder en dos semanas:
+          <br>
+          <em><b>¿Cuáles son las 5 capacidades críticas que generan valor y qué sistemas las soportan?</b></em>
+        </p>
+        <p style="text-align: center; margin-top: 15px;"><strong>El resultado sería una visibilidad estratégica sin precedentes.</strong></p>
+      </div>
+    </section>
+
+    <!-- Slide 8: Cierre -->
+    <section class="final-slide">
+      <h1>Gracias</h1>
+      <h3 style="margin-top: 40px;">La Arquitectura Empresarial asegura que el futuro que construimos sea tan <strong>sólido
+        y confiable</strong> como nuestro nombre.</h3>
+      <p style="margin-top: 30px;">¿Preguntas?</p>
+      <div style="background: #f5f7f9; padding: 5px">
+        <img src="https://raw.githubusercontent.com/jessusvelasquez/images/main/logo_td.jpeg"
+             alt="Logo Transformación Digital" style="height: 100px;">
+      </div>
+
+    </section>
+  </div>
+</div>
+
+<!-- Reveal.js Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+<script>
+  // Initialize Reveal.js
+  Reveal.initialize({
+    history: false,
+    hash: false,
+    controls: true,
+    progress: true,
+    plugins: [],
+  });
+</script>
+
+</body>
+</html>
