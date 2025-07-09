@@ -312,6 +312,35 @@
         max-height: 80px;
     }
 }
+
+/* Permitir scroll vertical en cada slide */
+.reveal .slides section {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Ajustes adicionales para tablets en modo horizontal */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .reveal {
+        font-size: 18px;
+    }
+
+    .reveal h1 {
+        font-size: 1.4em;
+    }
+
+    .reveal h2 {
+        font-size: 1.2em;
+    }
+
+    .gear-box, .proposal-box, .custom-card {
+        width: 90%;
+    }
+
+    .reveal .slides section {
+        padding: 10px 20px;
+    }
+}
 </style>
 </head>
 <body>
