@@ -204,17 +204,6 @@
           text-align: center;
       }
 
-      .proposal-box {
-          background-color: #e6f2f9;
-          border: 2px dashed var(--fidu-light-blue);
-          padding: 25px;
-          border-radius: 15px;
-          text-align: left;
-          font-size: 0.8em;
-          margin-top: 30px;
-          width: 80%;
-      }
-
       .proposal-box h3 {
           margin-top: 0;
       }
@@ -239,7 +228,7 @@
           padding: 30px;
           border-radius: 10px;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-          text-align: left;
+          text-align: center;
           margin: 20px auto;
           width: 90%;
       }
@@ -269,7 +258,7 @@
 
       @media screen and (max-height: 900px) {
           .reveal {
-              font-size: 16px;
+              font-size: 30px;
           }
 
           .reveal h1 {
@@ -281,19 +270,16 @@
           }
 
           .reveal .slides section {
-              padding: 5px 10px;
               max-height: 100vh;
-              overflow-y: auto;
+              overflow-y: hidden;
           }
 
           .gear-box, .proposal-box, .custom-card {
               width: 100%;
               padding: 10px;
-              font-size: 0.9em;
           }
 
           .pillars-grid {
-              grid-template-columns: 1fr;
               gap: 15px;
           }
 
@@ -311,6 +297,9 @@
 
           .title-slide .presenter-info {
               font-size: 0.9em;
+          }
+          .card{
+              font-size: 20px;
           }
       }
 
