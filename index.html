@@ -303,6 +303,70 @@
           }
       }
 
+      /* Styles for Architecture Model Slide */
+      .comparison-container {
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-start;
+          gap: 20px;
+          width: 100%;
+      }
+      .diagram-box {
+          width: 48%;
+          font-size: 0.6em;
+          text-align: center;
+      }
+      .diagram-box h3 {
+          font-size: 1.1em;
+          margin-bottom: 15px;
+      }
+      .diagram-box p {
+          font-size: 0.9em;
+          line-height: 1.4;
+      }
+      .layered-diagram {
+          background: white;
+          padding: 15px;
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #ddd;
+      }
+      .layer {
+          padding: 4px;
+          border-radius: 5px;
+          text-align: center;
+          font-weight: bold;
+          margin-bottom: 10px;
+          border: 1px solid;
+      }
+      .layer.arrow {
+          font-size: 1.5em;
+          border: none;
+          background: none;
+          margin: -5px 0;
+          color: var(--fidu-dark-blue);
+          box-shadow: none;
+      }
+      .spaghetti-diagram {
+          height: 250px;
+          width: 100%;
+          border-radius: 8px;
+          position: relative;
+          background-color: white;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #ddd;
+          overflow: hidden;
+      }
+      .spaghetti-diagram .app {
+          position: absolute;
+          background-color: var(--fidu-light-blue);
+          color: white;
+          padding: 5px 8px;
+          border-radius: 50px;
+          font-size: 0.8em;
+          z-index: 2;
+      }
+
   </style>
 </head>
 <body>
@@ -391,6 +455,37 @@
         La Arquitectura Empresarial es el <strong>puente de diseño y el traductor</strong> que une estos dos mundos,
         permitiéndonos ser ágiles y seguros a la vez.
       </p>
+    </section>
+
+    <section>
+      <h2>¿Y cómo se ve la Arquitectura en la práctica?</h2>
+      <div class="comparison-container">
+        <div class="diagram-box fragment" data-fragment-index="1">
+          <h3>ANTES: Integración Punto a Punto</h3>
+          <div class="spaghetti-diagram">
+             <!-- Aplicaciones -->
+            <div class="app" style="top: 10%; left: 15%;">CRM</div>
+            <div class="app" style="top: 70%; left: 15%;">ERP</div>
+            <div class="app" style="top: 40%; left: 45%; background: var(--fidu-dark-blue);">Core</div>
+            <div class="app" style="top: 10%; right: 5%;">Facturación</div>
+            <div class="app" style="top: 70%; right: 5%;">Web</div>
+          </div>
+          <p>Sistemas complejos, costosos de mantener y lentos para cambiar. Se generan silos y deuda técnica.</p>
+        </div>
+        <div class="diagram-box fragment" data-fragment-index="2">
+          <h3>DESPUÉS: Arquitectura por Capas</h3>
+          <div class="layered-diagram">
+            <div class="layer" style="background-color: #cce5ff; border-color: #b8daff;">Capa de Presentación (Canales)</div>
+            <div class="layer arrow">↓</div>
+            <div class="layer" style="background-color: #d1ecf1; border-color: #bee5eb;">Capa de Negocio (Capacidades)</div>
+            <div class="layer arrow">↓</div>
+            <div class="layer" style="background-color: #d4edda; border-color: #c3e6cb;">Capa de Aplicaciones (Sistemas)</div>
+            <div class="layer arrow">↓</div>
+            <div class="layer" style="background-color: #f8d7da; border-color: #f5c6cb;">Capa de Datos (Información)</div>
+          </div>
+          <p>Un modelo ordenado que promueve la reutilización, la agilidad y reduce los costos a largo plazo.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Slide 5.1: Pilares (Parte 1) -->
